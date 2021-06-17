@@ -1,6 +1,6 @@
 from typing import List
 
-def selection_sort(A:List) -> List:
+def selection_sort(A:List) -> None:
     n = len(A)
     for i in range(n):
         min_index = i
@@ -9,9 +9,7 @@ def selection_sort(A:List) -> List:
                 min_index = j
         A[min_index], A[i] = A[i], A[min_index]
 
-    return A
-
 if __name__ == '__main__':
     l = [3,4,6,3,5,56,4,32,66,4,-1]
-    l_s = selection_sort(l)
-    print(l_s)
+    selection_sort(l)
+    print(l)
